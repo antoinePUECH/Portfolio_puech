@@ -25,37 +25,40 @@
     transform: scale(1);
   }
 }
+@keyframes neon {
+  to {
+    transform: translate(50%, 0);
+  }
+}
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-color: #001C38;
+  background-color: #000000;
 }
 body header {
   text-align: right;
   padding: 15px 50px;
 }
 body header .navbar a {
-  font-family: Montserrat Alternates;
+  text-transform: uppercase;
+  font-family: "Montserrat Alternates";
   font-size: 25px;
   color: #00FFD4;
   text-decoration: none;
   margin: 0 30px;
 }
 body header .navbar .accueil {
-  border: solid 1.5px #F9006B;
   border-radius: 7px;
   padding: 2px 8px;
 }
 body header .navbar .projet {
-  border: solid 1.5px #F9006B;
   border-radius: 7px;
   padding: 2px 8px;
 }
 body header .navbar .contact {
-  border: solid 1.5px #F9006B;
   border-radius: 7px;
   padding: 2px 8px;
 }
@@ -68,12 +71,41 @@ body .master_content {
   text-align: center;
 }
 body .master_content .prenom {
-  text-align: center;
-}
-body .master_content .prenom svg {
-  position: relative;
-  top: 15px;
+  display: inline-flex;
+  filter: brightness(200%);
   overflow: hidden;
+}
+body .master_content .prenom .neon-prenom {
+  font-size: 140px;
+  color: #ffffff;
+  background: black;
+  font-family: "Harlow Solid Plain";
+  text-transform: capitalize;
+}
+body .master_content .prenom .neon-prenom::before {
+  content: "Antoine Puech";
+  position: absolute;
+  mix-blend-mode: difference;
+  filter: blur(1px);
+}
+body .master_content .prenom .gradient {
+  background: linear-gradient(110.821095162deg, #00ffd4 5.5338541667%, #fc3da3 96.6796875%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+body .master_content .prenom .dodge {
+  background: radial-gradient(circle, white, black 25%) center/25% 25%;
+  position: absolute;
+  top: -20%;
+  left: -300%;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: color-dodge;
+  animation: neon 6s linear infinite;
 }
 body .master_content #comete {
   width: 750px;
@@ -83,7 +115,7 @@ body .master_content .info #info {
   color: #F9006B;
   text-transform: uppercase;
   font-size: 60px;
-  font-family: Montserrat Alternates;
+  font-family: "Montserrat Alternates";
   font-weight: 300;
 }
 body #triangle {
@@ -115,7 +147,6 @@ body #triangle4 {
   position: absolute;
   bottom: 60%;
   left: 15%;
-  transform: rotate(30deg);
 }
 body #triangle5 {
   transition: all 0.8s;
@@ -143,14 +174,14 @@ body #circle1 {
 body #circle2 {
   transition: all 0.3s;
   position: absolute;
-  top: 75%;
-  left: 30%;
+  bottom: 10%;
+  left: 35%;
 }
 body #circle3 {
   transition: all 0.3s;
   position: absolute;
   top: 15%;
-  left: 25%;
+  left: 28%;
 }
 body #circle4 {
   transition: all 0.3s;
@@ -165,28 +196,39 @@ body #circle5 {
   right: 40%;
 }
 body #zigzag {
-  transform: rotate(5deg);
   position: absolute;
   right: 15%;
   bottom: 40%;
 }
 body #zigzag1 {
-  transform: rotate(105deg);
   position: absolute;
   left: 40%;
   top: 13%;
 }
 body #zigzag1 {
-  transform: rotate(105deg);
   position: absolute;
   left: 40%;
   top: 13%;
 }
 body #zigzag2 {
-  transform: rotate(145deg);
   position: absolute;
   left: 5%;
   bottom: 13%;
+}
+body #zigzag3 {
+  position: absolute;
+  left: 22%;
+  bottom: 10%;
+}
+body #zigzag4 {
+  position: absolute;
+  right: 18%;
+  bottom: 13%;
+}
+body #zigzag5 {
+  position: absolute;
+  right: 7%;
+  top: 20%;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="46.076" height="49.528" viewBox="0 0 46.076 49.528">
-  <g id="Polygone_3" data-name="Polygone 3" transform="matrix(0.358, 0.934, -0.934, 0.358, 31.742, 0)" fill="none">
-    <path d="M20,0,40,34H0Z" stroke="none"/>
-    <path d="M 20 3.944618225097656 L 3.496833801269531 32 L 36.50316619873047 32 L 20 3.944618225097656 M 20 0 L 40 34 L 0 34 L 20 0 Z" stroke="none" fill="#04feed"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="71.879" height="69.72" viewBox="0 0 71.879 69.72">
+  <g id="Polygone_10" data-name="Polygone 10" transform="translate(26.282) rotate(34)" fill="none">
+    <path d="M27.5,0,55,47H0Z" stroke="none"/>
+    <path d="M 27.5 3.960285186767578 L 3.487400054931641 45 L 51.51259613037109 45 L 27.5 3.960285186767578 M 27.5 0 L 55 47 L 0 47 L 27.5 0 Z" stroke="none" fill="#04feed"/>
   </g>
 </svg>

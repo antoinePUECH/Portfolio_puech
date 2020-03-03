@@ -34,10 +34,47 @@ $scale: scale(1.3); $rotate: rotate(360deg);
     transform: scale(1);
   }
 }
+//
 
 @keyframes neon {
   to {
     transform: translate(50%, 0);
+  }
+}
+// 
+@keyframes animate1{
+  0%{
+    left: -100%;
+  }
+  50%,100%{
+    left: 100%;
+  }
+}
+
+@keyframes animate2{
+  0%{
+    top: -100%;
+  }
+  50%,100%{
+    top: 100%;
+  }
+}
+
+@keyframes animate3{
+  0%{
+    right: -100%;
+  }
+  50%,100%{
+    right: 100%;
+  }
+}
+
+@keyframes animate4{
+  0%{
+    bottom: -100%;
+  }
+  50%,100%{
+    bottom: 100%;
   }
 }
 
@@ -48,36 +85,81 @@ $scale: scale(1.3); $rotate: rotate(360deg);
 }
 body{
     background-color: #000000;
+    
 
     header{
         text-align: right;
-        padding: 15px 50px;
+        padding: 20px 30px;
+        
         .navbar{
             a{
-              text-transform: uppercase;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-flex;
             font-family: $font;
             font-size: 25px;
             color: $cyan;
             text-decoration: none;
-            margin: 0 30px;
+            margin: 0px 20px;
+            padding: 10px 30px;
+            letter-spacing: 3px;
+            transition: 0.5s;
+            overflow: hidden;
+              span{
+                position: absolute;
+                display: block;
+              }
+              span:nth-child(1){
+                top: 0;
+                left:0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg,transparent,$cyan);
+                animation: animate1 1.5s linear infinite;
+              }
+              span:nth-child(2){
+                top: -100%;
+                right:0;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(180deg,transparent,$cyan);
+                animation: animate2 1.5s linear infinite;
+                animation-delay: 0.4s;
+              }
+              span:nth-child(3){
+                bottom: 0;
+                right: -100%;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(270deg,transparent,$cyan);
+                animation: animate3 1.5s linear infinite;
+                animation-delay: 0.8s;
+              }
+              span:nth-child(4){
+                left: 0;
+                bottom: -100%;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(360deg,transparent,$cyan);
+                animation: animate4 1.5s linear infinite;
+                animation-delay: 1.15s;
+              }
             }
-            .accueil{
-            border-radius: 7px;
-            padding: 2px 8px;
-           }
-            .projet{
-            border-radius: 7px;
-            padding: 2px 8px;
-           }
-           .contact{
-             border-radius: 7px;
-             padding: 2px 8px;
+            a:hover{
+              background: $cyan;
+              border-radius: 8px;
+              color: #000000;
+              box-shadow: 0 0 5px $cyan,
+                          0 0 25px $cyan,
+                          0 0 50px $cyan,
+                          0 0 200px $cyan;
+            }
         }
       }
-    }
+    
     .trait_blanc{
     background-color: white;
-    height: 2px;
+    height: 1px;
     }
     // élément au centre 
     .master_content{
@@ -88,21 +170,21 @@ body{
             filter: brightness(200%);
             overflow: hidden;
             
-                .neon-prenom{
-                    font-size: 140px;
+                #neon-prenom{
+                    font-size: 150px;
                     color: #ffffff;
                     background: rgb(0, 0, 0);
                     font-family:"Harlow Solid Plain";
                     text-transform: capitalize;
                     }
-                    .neon-prenom::before{
+                    #neon-prenom::before{
                       content: 'Antoine Puech';
                       position: absolute;
                       mix-blend-mode: difference;
                       filter: blur(1px);
                     }
                     .gradient{
-                      background: linear-gradient(110.8210951619775deg, rgba(0, 255, 212,1) 5.533854166666667%,rgba(252, 61, 163,1) 96.67968749999999%);
+                      background: linear-gradient(90.7763903380245deg, rgba(0, 255, 212,1) 9.837239583333334%,rgba(250, 0, 96,1) 78.62792968750001%);
                       position: absolute;
                       top: 0;
                       left: 0;
@@ -118,7 +200,7 @@ body{
                       right: 0;
                       bottom: 0;
                       mix-blend-mode: color-dodge;
-                      animation: neon 6s linear infinite;
+                      animation: neon 7s linear infinite;
                     }
                 }
         #comete{

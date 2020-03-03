@@ -381,5 +381,6 @@ document.getElementById('zigzag5').addEventListener('mouseover' , function() {
         document.getElementById('zigzag1').style.animation = '';
 
 });
+
 /////////////////////////////////////////////////// animation du décors
 })

@@ -30,6 +30,38 @@
     transform: translate(50%, 0);
   }
 }
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -40,31 +72,70 @@ body {
 }
 body header {
   text-align: right;
-  padding: 15px 50px;
+  padding: 20px 30px;
 }
 body header .navbar a {
   text-transform: uppercase;
+  position: relative;
+  display: inline-flex;
   font-family: "Montserrat Alternates";
   font-size: 25px;
   color: #00FFD4;
   text-decoration: none;
-  margin: 0 30px;
+  margin: 0px 20px;
+  padding: 10px 30px;
+  letter-spacing: 3px;
+  transition: 0.5s;
+  overflow: hidden;
 }
-body header .navbar .accueil {
-  border-radius: 7px;
-  padding: 2px 8px;
+body header .navbar a span {
+  position: absolute;
+  display: block;
 }
-body header .navbar .projet {
-  border-radius: 7px;
-  padding: 2px 8px;
+body header .navbar a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00FFD4);
+  animation: animate1 1.5s linear infinite;
 }
-body header .navbar .contact {
-  border-radius: 7px;
-  padding: 2px 8px;
+body header .navbar a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #00FFD4);
+  animation: animate2 1.5s linear infinite;
+  animation-delay: 0.4s;
+}
+body header .navbar a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #00FFD4);
+  animation: animate3 1.5s linear infinite;
+  animation-delay: 0.8s;
+}
+body header .navbar a span:nth-child(4) {
+  left: 0;
+  bottom: -100%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #00FFD4);
+  animation: animate4 1.5s linear infinite;
+  animation-delay: 1.15s;
+}
+body header .navbar a:hover {
+  background: #00FFD4;
+  border-radius: 8px;
+  color: #000000;
+  box-shadow: 0 0 5px #00FFD4, 0 0 25px #00FFD4, 0 0 50px #00FFD4, 0 0 200px #00FFD4;
 }
 body .trait_blanc {
   background-color: white;
-  height: 2px;
+  height: 1px;
 }
 body .master_content {
   margin-top: 5%;
@@ -75,21 +146,21 @@ body .master_content .prenom {
   filter: brightness(200%);
   overflow: hidden;
 }
-body .master_content .prenom .neon-prenom {
-  font-size: 140px;
+body .master_content .prenom #neon-prenom {
+  font-size: 150px;
   color: #ffffff;
   background: black;
   font-family: "Harlow Solid Plain";
   text-transform: capitalize;
 }
-body .master_content .prenom .neon-prenom::before {
+body .master_content .prenom #neon-prenom::before {
   content: "Antoine Puech";
   position: absolute;
   mix-blend-mode: difference;
   filter: blur(1px);
 }
 body .master_content .prenom .gradient {
-  background: linear-gradient(110.821095162deg, #00ffd4 5.5338541667%, #fc3da3 96.6796875%);
+  background: linear-gradient(90.776390338deg, #00ffd4 9.8372395833%, #fa0060 78.6279296875%);
   position: absolute;
   top: 0;
   left: 0;
@@ -105,7 +176,7 @@ body .master_content .prenom .dodge {
   right: 0;
   bottom: 0;
   mix-blend-mode: color-dodge;
-  animation: neon 6s linear infinite;
+  animation: neon 7s linear infinite;
 }
 body .master_content #comete {
   width: 750px;
